@@ -28,6 +28,18 @@
         height: auto;
         object-fit: cover;
     }
+
+    /* Specific styling for resume iframe */
+    #resume {
+        width: 100%;
+        height: 1000px;
+    }
+
+    /* Specific styling for YouTube iframe */
+    #highlights {
+        width: 100%;
+        height: 700px;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -50,6 +62,18 @@
     .image-container img {
         width: 100%;
         height: auto;
+    }
+
+    /* Specific styling for resume iframe */
+    #resume {
+        width: 960px;
+        height: 1000px;
+    }
+
+    /* Specific styling for YouTube iframe */
+    #highlights {
+        width: 1500px;
+        height: 700px;
     }
 }
 
@@ -151,13 +175,13 @@ h1, h2, h3 {
 }
 
 #highlights {
-    width: 1500px;
+    width: 100%;
     height: 700px;
     border: none;
 }
 
 #resume {
-    width: 960px;
+    width: 100%;
     height: 1000px;
     border: none;
 }
@@ -217,6 +241,12 @@ footer {
     #dunk {
         width: 100%; /* Full width on smaller screens */
         height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Specific iframe adjustments for smaller screens */
+    #resume, #highlights {
+        width: 100%;
+        height: 400px; /* Resize the iframe for better mobile experience */
     }
 }
 
