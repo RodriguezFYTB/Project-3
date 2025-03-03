@@ -20,6 +20,13 @@
     .image-container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: auto;
+        object-fit: cover; /* Ensure images fill their containers */
     }
 }
 
@@ -39,6 +46,11 @@
     .image-container {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+
+    .image-container img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 body {
@@ -53,6 +65,13 @@ body {
     justify-content: space-evenly;
     width: 100%;
     box-shadow: 0px 0px 10px 10px rgba(179, 24, 24, 0.6);
+    flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Maintain aspect ratio while filling the container */
 }
 
 .resume-pdf {
@@ -77,14 +96,14 @@ nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex; 
-    gap: 20px;     
+    display: flex;
+    gap: 20px;
 }
 
 nav ul li {
     text-align: center;
 }
-    
+
 nav ul li a {
     display: block;
     color: rgb(207, 176, 118);
@@ -100,16 +119,15 @@ nav a:hover {
 }
 
 .fixed-layout {
-    width: 88%; 
-    margin: 0 auto; 
+    width: 88%;
+    margin: 0 auto;
     padding: 60px;
     background-color: #000000;
     color: rgb(206, 194, 194);
     box-shadow: 0px 0px 10px 10px rgba(179, 24, 24, 0.6);
     border-radius: 90px;
-    margin-top: 50px; 
+    margin-top: 50px;
     margin-bottom: 40px;
-   
 }
 
 .text {
@@ -123,6 +141,7 @@ nav a:hover {
 h1, h2, h3 {
     text-align: center;
 }
+
 #resume-heading {
     margin-top: -40px;
 }
@@ -157,33 +176,51 @@ footer {
 
 /* Style for map container */
 #map {
-    height: 900px;  /* Map height */
-    width: 100%;    /* Full-width map */
+    height: 900px;
+    width: 100%;
 }
 
+#mxc, #dominican, #dunk, #computer-pic1, #computer-pic2 {
+    width: 100%;
+    height: auto;
+}
 
+/* Specific image sizes (fixed for larger screens) */
 #mxc {
-    height: 600px; 
+    height: 600px;
     width: 400px;
 }
 
 #dominican {
-    height: 600px; 
+    height: 600px;
     width: 400px;
 }
+
 #dunk {
-    height: 600px; 
-    width: 800px;
+    height: 600px; /* Fixed size for desktop */
+    width: 800px;  /* Fixed size for desktop */
 }
 
 #computer-pic1 {
-    height: 800px; 
+    height: 800px;
     width: 800px;
 }
 
 #computer-pic2 {
-    height: 800px; 
+    height: 800px;
     width: 600px;
+}
+
+/* For screens smaller than 1024px, make images fill the container */
+@media screen and (max-width: 1024px) {
+    .image-container img {
+        object-fit: cover;
+    }
+
+    #dunk {
+        width: 100%; /* Full width on smaller screens */
+        height: auto; /* Maintain aspect ratio */
+    }
 }
 
 #socials {
@@ -193,12 +230,13 @@ footer {
     align-items: center;
     height: 90px;
 }
+
 #socials ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex; 
-    gap: 20px;     
+    display: flex;
+    gap: 20px;
 }
 
 #socials ul li {
