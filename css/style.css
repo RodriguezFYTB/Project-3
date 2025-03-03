@@ -199,10 +199,6 @@ footer {
     width: 100%;
 }
 
-#mxc, #dominican, #dunk, #computer-pic1, #computer-pic2 {
-    width: 100%;
-    height: auto;
-}
 
 #mxc {
     height: 600px;
@@ -221,7 +217,7 @@ footer {
 
 #computer-pic1 {
     height: 800px;
-    width: 800px;
+    width: 700px;
 }
 
 #computer-pic2 {
