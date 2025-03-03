@@ -29,13 +29,11 @@
         object-fit: cover;
     }
 
-    /* Specific styling for resume iframe */
     #resume {
         width: 100%;
         height: 1000px;
     }
 
-    /* Specific styling for YouTube iframe */
     #highlights {
         width: 100%;
         height: 700px;
@@ -64,13 +62,11 @@
         height: auto;
     }
 
-    /* Specific styling for resume iframe */
     #resume {
         width: 960px;
         height: 1000px;
     }
 
-    /* Specific styling for YouTube iframe */
     #highlights {
         width: 1500px;
         height: 700px;
@@ -239,14 +235,13 @@ footer {
     }
 
     #dunk {
-        width: 100%; /* Full width on smaller screens */
-        height: auto; /* Maintain aspect ratio */
+        width: 100%; 
+        height: auto; 
     }
 
-    /* Specific iframe adjustments for smaller screens */
     #resume, #highlights {
         width: 100%;
-        height: 400px; /* Resize the iframe for better mobile experience */
+        height: 400px; 
     }
 }
 
